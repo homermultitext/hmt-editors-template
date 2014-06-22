@@ -10,7 +10,7 @@ Template for creating editorial repositories to use in the Homer Multitext proje
 - start the VM (`vagrant up`), connect to the VM (`vagrant ssh`), and cd to the shared directory
 (`cd /vagrant`)
 - run `git clone https://github.com/homermultitext/hmt-editors-template.git`
-- either in the VM or your host OS, rename the directory from `hmt-editors-template1 to something for your project (e.g., "iliad14-venA")
+- either in the VM or your host OS, rename the directory from `hmt-editors-template` to something for your project (e.g., "iliad14-venA")
 - in the VM, run `bash adjustnames.sh`
 
 
