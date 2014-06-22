@@ -7,10 +7,10 @@ TRAIL="</body></html>"
 
 
 cd /vagrant/citedownmgr
-gradle -Pconf=../hmt-12A/writing/cdmgr.conf flatmd
+gradle -Pconf=PATH/writing/cdmgr.conf flatmd
 
 
-cd /vagrant/hmt-12A/converted
+cd PATH/converted
 
 shopt -s nullglob
 for f in *.md
