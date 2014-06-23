@@ -7,7 +7,7 @@ TRAIL="</body></html>"
 
 
 cd /vagrant/citedownmgr
-gradle -Pconf=PATH/writing/cdmgr.conf flatmd
+gradle -Pconf=PATH/configs/cdmgr.conf flatmd
 
 
 cd PATH/converted
