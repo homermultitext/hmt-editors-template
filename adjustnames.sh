@@ -7,7 +7,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Adjust paths to ${DIR}"
 
-${SED} -i.bak 's#PATH/#${DIR}#g' vm-mom-config.gradle
+
+
+${SED} -i.bak 's#PATH/#${DIR}#g' configs/vm-mom-config.gradle
 
 cd scripts
 
