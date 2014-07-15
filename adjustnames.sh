@@ -6,15 +6,17 @@ SED=`which sed`
 GIT=`which git`
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo USING $DIR for directory
+
 echo "Adjust paths to ${DIR}"
 
 
 
-${SED} -i.bak 's#PATH/#${DIR}#g' configs/vm-mom-config.gradle
+${SED} -i.bak "s#PATH/#$DIR/#g" configs/vm-mom-config.gradle
 
 cd scripts
 
-${SED} -i.bak 's#PATH/#${DIR}#g' *.sh
+${SED} -i.bak "s#PATH/#$DIR/#g" *.sh
 
 cd ..
 
