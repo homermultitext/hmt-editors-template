@@ -187,7 +187,8 @@ body > div:before {
 }
 
 div[type="scholion"]:before {
-    content: "Identifier: " attr(n) " (= Erbse " attr(ana) ")";
+    content: "Identifier: " attr(n) ;
+    /*"(= Erbse " attr(ana) ")"; */
     color : blue;
     background-color : #bbb;
     padding: 0.2em;
