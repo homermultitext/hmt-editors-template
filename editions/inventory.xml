@@ -74,7 +74,7 @@
                 <label xml:lang="eng">msAil</label>
                 <description xml:lang="eng">Interlinear scholia of the Venetus A manuscript, Marciana 454
                     (=822).</description>
-                <online docname="scholia/InteriorScholia.xml">
+                <online docname="scholia/InterlinearScholia.xml">
                     
                     <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
                     <citationMapping>
