@@ -11,7 +11,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Venetus A Main Shcolia</title>
+                <title>Venetus A Main Scholia</title>
                 <author>YOUR NAME HERE</author>
             </titleStmt>
             <publicationStmt>
@@ -26,7 +26,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <group n="11">
             <text n="msA">
                 <body>
-                    <div n="urn:cts:greekLit:tlg5026.msA.hmt:12.1" type="scholion">
+                    <div n="1" type="scholion">
                         <div type="lemma">
                             <p></p>
                         </div>

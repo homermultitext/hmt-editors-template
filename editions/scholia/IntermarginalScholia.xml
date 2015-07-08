@@ -26,7 +26,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <group n="12">
             <text n="msAim">
                 <body>
-                    <div n="urn:cts:greekLit:tlg5026.msAim.hmt:12.1" type="scholion">
+                    <div n="1" type="scholion">
                         <div type="lemma">
                             <p/>
                         </div>
