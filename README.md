@@ -1,8 +1,9 @@
-#hmt-editors-template#
+# hmt-editors-template, summer 2016#
 
 
 Template for creating editorial repositories to use in the Homer Multitext project virtual machine.
 
+The current template is intended for use with the HMT project virtual machine used in summer, 2016. See <http://homermultitext.github.io/hmt-docs/vm/>.
 
 ## Setting up a HMT project editorial repository
 
@@ -12,7 +13,3 @@ Template for creating editorial repositories to use in the Homer Multitext proje
 - run `git clone https://github.com/homermultitext/hmt-editors-template.git`
 - either in the VM or your host OS, rename the directory from `hmt-editors-template` to something for your project (e.g., "iliad14-venA")
 - in the VM, run `bash adjustnames.sh`
-
-
-More documentation to follow.  For a first glimpse at what you can do with this template, see the
-documentation pages for the [HMT project 2014 summer seminar](http://www.homermultitext.org/summer2014/).
