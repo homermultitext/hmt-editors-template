@@ -24,7 +24,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
     </teiHeader>
     <text>
-        <group n="12">
+        <group n="24">
             <text n="msAil">
                 <body>
                     <div n="1" type="scholion">
