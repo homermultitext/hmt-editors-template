@@ -1,4 +1,6 @@
+
 # hmt-editors-template
+
 
 
 Template for creating editorial repositories to use in the Homer Multitext project virtual machine.
