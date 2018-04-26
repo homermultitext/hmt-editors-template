@@ -5,12 +5,12 @@
 
 Template for creating editorial repositories to use in the Homer Multitext project virtual machine.
 
-The current template is intended for use with the HMT project virtual machine used in summer, 2017.
+The current template is intended for use with the HMT project virtual machine used in summer, 2018.
 
 
 The docs at <http://homermultitext.github.io/hmt-docs/vm/> are not yet up to date with this.
 
-## Setting up a HMT project editorial repository
+## 2017 instrutions: setting up a HMT project editorial repository
 
 - install the [HMT project virtual machine](https://github.com/homermultitext/hmt-vm)
 - start the VM (`vagrant up`), connect to the VM (`vagrant ssh`), and cd to the shared directory
