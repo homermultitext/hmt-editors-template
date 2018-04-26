@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../css/tei-scholia.css"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!DOCTYPE TEI PUBLIC "-//TEI P5//DTD Main Document Type//EN" "http://www.tei-c.org/release/xml/tei/custom/schema/dtd/tei_all.dtd">
-
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
@@ -12,10 +6,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <titleStmt>
         <title>Iliad</title>
         <editor>YOUR NAME HERE</editor>
-
+        <editor>SECOND EDITOR's NAME HERE</editor>
       </titleStmt>
       <publicationStmt>
-        <p>Unpublished edition of the Venetus A manuscript for the Homer Multitext project</p>
+        <p>Unpublished edition of the Venetus B manuscript for the Homer Multitext project</p>
       </publicationStmt>
       <sourceDesc>
         <p>Edited directly from photography of the manuscript</p>
