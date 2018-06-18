@@ -4,8 +4,24 @@ import org.homermultitext.edmodel._
 import java.io.PrintWriter
 
 
-case class StringCount(s: String, count: Int)
+// Create a text repository.
+val catalog = "editions/catalog.cex"
+val citation = "editions/citation.cex"
+val editions = "editions"
+
+val textRepo = TextRepositorySource.fromFiles(catalog, citation, editions)
+
+val corpus = Corpus(textRepo.corpus.nodes.filterNot((_.urn.toString.contains("ref"))))
+val tokens = TeiReader.fromCorpus(textRepo.corpus)
+
+case class StringCount(s: String, count: Int) {
+  def cex :  String = {
+    s + "#" + count
+  }
+}
+
 case class StringOccurrence(urn: CtsUrn, s: String)
+
 
 def profileTokens(tokens: Vector[TokenAnalysis]) {
   val tokenTypes = tokens.map(_.analysis.lexicalCategory).distinct
@@ -16,7 +32,7 @@ def profileTokens(tokens: Vector[TokenAnalysis]) {
   }
 }
 
-def tokenHisto(tokens: Vector[TokenAnalysis]) : Vector[StringCount] = {
+def tokenHisto(tokens: Vector[TokenAnalysis]): Vector[StringCount] = {
   val strs = tokens.map(_.readWithAlternate.text)
   val grouped = strs.groupBy(w => w).toVector
   val counted =  grouped.map{ case (k,v) => StringCount(k,v.size) }
@@ -42,18 +58,22 @@ def wordList(tokens: Vector[TokenAnalysis]): Vector[String] = {
 }
 
 
-def profileCorpus (c: Corpus) = {
+def profileCorpus (c: Corpus, subdir: String = "validation") = {
   println("Citable nodes:  " + c.size)
   val tokens = TeiReader.fromCorpus(c)
   profileTokens(tokens)
   val lexTokens = tokens.filter(_.analysis.lexicalCategory == LexicalToken)
   val words = wordList(lexTokens)
-  new PrintWriter("wordlist.txt"){ write(words.mkString("\n")); close;}
+  new PrintWriter(subdir + "/wordlist.txt"){ write(words.mkString("\n")); close;}
   val idx = tokenIndex(lexTokens)
-  new PrintWriter("wordindex.txt"){ write(idx.mkString("\n")); close;}
+  new PrintWriter(subdir + "/wordindex.txt"){ write(idx.mkString("\n")); close;}
+  val histoCex = tokenHisto(lexTokens).map(_.cex)
+  new PrintWriter(subdir +  "/wordhisto.cex"){write(histoCex.mkString("\n")); close; }
+
 
   println("\n\nWrote index of all lexical tokens in file 'wordindex.txt'.")
   println("Wrote list of unique lexical token forms in file 'wordlist.txt'")
+  println("Wrote histogram of lexical token forms  in .cex format in file 'wordhisto.cex'")
 
   val errs = tokens.filter(_.analysis.errors.nonEmpty).map(err => "\n" + err.analysis.editionUrn.toString + s" has ${err.analysis.errors.size} error(s)\n\t" + err.analysis.errors.mkString("\n\t"))
   println("\n\nWrote index of all lexical tokens in file 'wordindex.txt'.")
@@ -65,9 +85,5 @@ def profileCorpus (c: Corpus) = {
   } else {
     println("No errors in tokenization.")
   }
-
-
-
-
 
 }

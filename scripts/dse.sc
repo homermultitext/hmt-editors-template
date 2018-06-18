@@ -2,6 +2,9 @@ import edu.holycross.shot.cite._
 import edu.holycross.shot.dse._
 import edu.holycross.shot.ohco2._
 import org.homermultitext.hmtcexbuilder._
+import org.homermultitext.edmodel._
+
+
 import java.io.PrintWriter
 
 // Header file with collection info
@@ -60,9 +63,33 @@ def mdForPage(u: Cite2Urn, dse: DseVector, c: Corpus): String = {
   md.toString
 }
 
+def passageView(dse: DseVector, corpus: Corpus, surface: Cite2Urn) : String = {
+  val indexedPassages = dse.textsForTbs(surface).toVector
+  val viewMd = StringBuilder.newBuilder
+  val rows = for (psg <- indexedPassages) yield {
+    val matches = corpus ~~ psg
+    matches.size match {
+      case 0 => "**Error**:  no text in corpus matching " + psg
+""      case 1 => {
+        val textReading = TeiReader.fromString(matches.nodes(0).cex("#")).map(_.analysis.readWithDiplomatic).mkString(" ")
+        val binaryImgBase = "http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/deepzoom/"
 
+        val imgWRoI = dse.imagesWRoiForText(psg).head
 
-def textToDseDiff(dse: DseVector, corpus: Corpus, surface: Cite2Urn) : String = {
+        val imgPath = List(imgWRoI.namespace, imgWRoI.collection, imgWRoI.version, imgWRoI.dropExtensions.objectComponent).mkString("/") + ".tif&RGN=" + imgWRoI.objectExtension + "&WID=5000&CVT=JPEG"
+
+        val imgs = "![image]("  + binaryImgBase + imgPath  + ")"
+        textReading + " " + imgs
+      }
+      case _ => "**Error**: multiple matches in corpus for " + psg
+    }
+  }
+
+  //"\n\n| Text | Image    |\n" +   "| :------------- | :------------- |\n" +
+  rows.mkString("\n\n")
+}
+
+def dseCoherenceReport(dse: DseVector, corpus: Corpus, surface: Cite2Urn) : String = {
   val bldr = StringBuilder.newBuilder
 
   val imgs = dse.imagesForTbs(surface)
@@ -70,8 +97,6 @@ def textToDseDiff(dse: DseVector, corpus: Corpus, surface: Cite2Urn) : String = 
     bldr.append(s"Could not analyze page ${surface}:  matched ${imgs.size} images (" + imgs.mkString(" ") + ")")
   } else {
     bldr.append("## Coherence of DSE relations to text editions\n\n")
-
-
     val dsePassages = dse.textsForImage(imgs.head)
     println("Checking on " + dsePassages.size + " passages in DSE records...")
     val accountedFor = for (psg <- dsePassages) yield {
@@ -99,11 +124,27 @@ def textToDseDiff(dse: DseVector, corpus: Corpus, surface: Cite2Urn) : String = 
 def pageView(pg: Cite2Urn, dse: DseVector, c: Corpus) : Unit= {
   val bldr = StringBuilder.newBuilder
   bldr.append(mdForPage(pg, dse, c))
-  bldr.append(textToDseDiff(dse,c, pg))
+  bldr.append(dseCoherenceReport(dse,c, pg))
 
 
-  bldr.append("## Human verification\n\n")
-  bldr.append(s"To check for **completeness** of coverage, please review [all DSE relations of page ${pg.objectComponent} in ICT2](${dse.ictForSurface(pg)}).\n\n")
+  bldr.append("\n\n## Human verification\n\n###  Completeness\n\n")
+  bldr.append(s"To check for **completeness** of coverage, please review these visualizations of DSE relations in ICT2:\n\n")
+
+
+  bldr.append("- [**all** DSE relations of page ${pg.objectComponent} ](${dse.ictForSurface(pg)}).\n\n")
+
+  bldr.append("Visualizations for individual documents:\n\n")
+  val texts =  dse.textsForTbs(pg).map(_.dropPassage).toVector
+  val listItems = for (txt <- texts) yield {
+    println("Create view for " + txt + " ...")
+    val oneDocDse = DseVector(dse.passages.filter(_.passage ~~ txt))
+    "-  all [passages in " + txt + "](" + oneDocDse.ictForSurface(pg) + ")."
+  }
+  bldr.append(listItems.mkString("\n"))
+  bldr.append("\n\n### Correctness\n\n")
+  bldr.append("To check for **correctness** of indexing, please verify that text transcriptions and images agree:\n\n")
+
+  bldr.append(passageView(dse, c, pg))
 
   new PrintWriter("validation/dse-" + pg.collection + "-" + pg.objectComponent + ".md"){ write (bldr.toString); close}
   println("Markdown report is in validation directory: dse-" + pg.collection + "-" + pg.objectComponent + ".md")

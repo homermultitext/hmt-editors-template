@@ -34,6 +34,7 @@ val scholia = Corpus(collapsed.toVector.map( n => {
 
 val corpus = iliad ++ scholia
 
+
 println("\n\n\nLoaded the following named corpora:\n")
 println(s"\tiliad (${iliad.size} citable nodes)")
 println(s"\tscholia (${scholia.size} citable nodes)")
