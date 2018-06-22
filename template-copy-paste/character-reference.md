@@ -27,4 +27,11 @@ The following characters are used to encode punctuation:
 
 ### "Floating" characters
 
-Our manuscripts sometimes create combinations of accents, breathings and other marks that we do not encounter in modern typeset Greek, and that cannot be encoded with Unicode characters.
+Our manuscripts sometimes create combinations of accents, breathings and other marks that we do not encounter in modern typeset Greek, and that cannot be encoded with Unicode characters.  In those cases where you may need to add an additional diacritic character, use the following encodings:
+
+-  "floating" acute accent:  `/`
+-  "floating" grave accent:  `\`
+-  "floating" diaeresis:  `+`
+
+
+[EXAMPLES TBA]
