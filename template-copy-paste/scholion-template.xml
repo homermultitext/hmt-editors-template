@@ -1,0 +1,31 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Template for a scholion in HMT project</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>HMT project, summer, 2018</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="scholion" n="PAGE_NUMBER">
+        <div n="lemma">
+          <p>Lemma or "footnote number"</p>
+        </div>
+        <div n="ref">
+          <p>urn:cts:greekLit:tlg0012.tlg001.VERSION:PASSAGE</p>
+        </div>
+        <div n="comment">
+          <p>TEXT OF SCHOLION</p>
+        </div>
+      </div>
+    </body>
+  </text>
+
+</TEI>
