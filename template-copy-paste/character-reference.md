@@ -12,26 +12,26 @@ You may use alphabetic α-ω in upper or lower case.  They characters may be com
 
 The following characters are used to encode punctuation:
 
--  period = `.`
--  comma = `,`
--  interrogation mark = `;`
--  high stop = `-` (hyphen)
--  "end-of-scholion/unit" marker:  `⁑` (Unicode U+2015)
--  "large unit divider":  `‡` (Unicode U+2021)
+-   period = `.`
+-   comma = `,`
+-   interrogation mark = `;`
+-   high stop = `-` (hyphen)
+-   "end-of-scholion/unit" marker:  `⁑` (Unicode U+2015)
+-   "large unit divider":  `‡` (Unicode U+2021)
 
 
 ### Quantity
 
--  macron = `_` (underscore)
--  breve = `^`
+-   macron = `_` (underscore)
+-   breve = `^`
 
 ### "Floating" characters
 
 Our manuscripts sometimes create combinations of accents, breathings and other marks that we do not encounter in modern typeset Greek, and that cannot be encoded with Unicode characters.  In those cases where you may need to add an additional diacritic character, use the following encodings:
 
--  "floating" acute accent:  `/`
--  "floating" grave accent:  `\`
--  "floating" diaeresis:  `+`
+-   "floating" acute accent =  `/`
+-   "floating" grave accent =  `\`
+-   "floating" diaeresis =  `+`
 
 
-[EXAMPLES TBA]
+**EXAMPLES TBA**
