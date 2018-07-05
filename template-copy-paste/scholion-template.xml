@@ -1,0 +1,12 @@
+
+      <div type="scholion" n="PAGE_NUMBER">
+        <div n="lemma">
+          <p>Lemma or "footnote number"</p>
+        </div>
+        <div n="ref">
+          <p>urn:cts:greekLit:tlg0012.tlg001.VERSION:PASSAGE</p>
+        </div>
+        <div n="comment">
+          <p>TEXT OF SCHOLION</p>
+        </div>
+      </div>
