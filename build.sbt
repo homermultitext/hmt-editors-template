@@ -12,6 +12,6 @@ libraryDependencies ++= Seq(
   "edu.holycross.shot" %% "scm" % "6.1.1",
   "org.homermultitext" %% "hmt-textmodel" % "3.4.3",
   "org.homermultitext" %% "hmtcexbuilder" % "3.2.0",
-  "org.homermultitext" %% "hmt-mom" % "3.4.0",
+  "org.homermultitext" %% "hmt-mom" % "3.4.1",
   "edu.holycross.shot" %% "greek" % "1.4.0"
 )

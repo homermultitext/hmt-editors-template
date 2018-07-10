@@ -1,2 +1,5 @@
 urn#citationScheme#groupName#workTitle#versionLabel#exemplarLabel#online#language
-urn:cts:greekLit:tlg0012.tlg001.va_xml:#book,line#Homeric poetry#Iliad#HMT project archival XML edition##true#grc
+urn:cts:greekLit:tlg0012.tlg001.vb_xml:#book,line#Homeric poetry#Iliad#HMT project archival XML edition##true#grc
+urn:cts:greekLit:tlg0012.tlg001.e3_xml:#book,line#Homeric poetry#Iliad#HMT project archival XML edition##true#grc
+urn:cts:greekLit:tlg5026.e3.hmt_xml:#book,scholion,section#Scholia to the Iliad#Escorial Upsilon 1.1#HMT project archival XML edition##true#grc
+urn:cts:greekLit:tlg5026.vb.hmt_xml:#book,scholion,section#Scholia to the Iliad#Escorial Upsilon 1.1#HMT project archival XML edition##true#grc

@@ -1,3 +1,5 @@
 Text URN#Format#Document#Namespace mapping#Citation model
-urn:cts:greekLit:tlg0012.tlg001.e3_xml:#xml#e3_iliad.xml#tei->http://www.tei-c.org/ns/1.0#/tei:TEI/tei:text/tei:body/tei:div[@n = '?']/tei:l[@n = '?']
-urn:cts:greekLit:tlg0012.tlg001.vb_xml:#xml#vb_iliad.xml#tei->http://www.tei-c.org/ns/1.0#/tei:TEI/tei:text/tei:body/tei:div[@n = '?']/tei:l[@n = '?']
+urn:cts:greekLit:tlg0012.tlg001.e3_xml:#xml#iliad/e3_iliad.xml#tei->http://www.tei-c.org/ns/1.0#/tei:TEI/tei:text/tei:body/tei:div[@n = '?']/tei:l[@n = '?']
+urn:cts:greekLit:tlg0012.tlg001.vb_xml:#xml#iliad/vb_iliad.xml#tei->http://www.tei-c.org/ns/1.0#/tei:TEI/tei:text/tei:body/tei:div[@n = '?']/tei:l[@n = '?']
+urn:cts:greekLit:tlg5026.vb.hmt_xml:#xml#scholia/vb_scholia.xml#tei->http://www.tei-c.org/ns/1.0#/tei:TEI/tei:text/tei:group[@n = '?']/tei:text/tei:body/tei:div[@n = '?']/tei:div[@n = '?']
+urn:cts:greekLit:tlg5026.e3.hmt_xml:#xml#scholia/e3_scholia.xml#tei->http://www.tei-c.org/ns/1.0#/tei:TEI/tei:text/tei:group[@n = '?']/tei:text/tei:body/tei:div[@n = '?']/tei:div[@n = '?']
