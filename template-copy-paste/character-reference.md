@@ -26,7 +26,7 @@ In addition to the classical alphabet characters used for numeric values in the 
 
 -  ϛ (numeric value 6, Unicode U+03DF)
 -  (numeric 90)
--  (numeric 900)
+-  ϡ (numeric 900, Unicode U+03C1)
 
 ### Quantity
 
