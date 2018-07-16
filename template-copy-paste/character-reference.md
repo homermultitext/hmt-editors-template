@@ -24,7 +24,7 @@ The following characters are used to encode punctuation:
 
 In addition to the classical alphabet characters used for numeric values in the "Milesian" system, we recognize these three additional characters:
 
--  (numeric 6)
+-  ϛ (numeric value 6, Unicode U+03DF)
 -  (numeric 90)
 -  (numeric 900)
 
