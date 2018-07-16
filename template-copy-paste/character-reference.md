@@ -20,6 +20,14 @@ The following characters are used to encode punctuation:
 -   "large unit divider":  `‡` (Unicode U+2021)
 
 
+### Numeric characters
+
+In addition to the classical alphabet characters used for numeric values in the "Milesian" system, we recognize these three additional characters:
+
+-  (numeric 6)
+-  (numeric 90)
+-  (numeric 900)
+
 ### Quantity
 
 -   macron = `_` (underscore)
@@ -32,6 +40,8 @@ Our manuscripts sometimes create combinations of accents, breathings and other m
 -   "floating" acute accent =  `/`
 -   "floating" grave accent =  `\`
 -   "floating" diaeresis =  `+`
+
+
 
 
 **EXAMPLES TBA**
