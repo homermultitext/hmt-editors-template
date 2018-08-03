@@ -5,6 +5,10 @@ import better.files._
 import java.io.{File => JFile}
 import better.files.Dsl._
 
+import sys.process._
+import scala.language.postfixOps
+
+
 val compiler = "/usr/local/bin/fst-compiler-utf8"
 val fstinfl = "/usr/local/bin/fst-infl"
 val make = "/usr/bin/make"
@@ -29,11 +33,26 @@ def compile(repo: String =  "../kanones", datasets: String = "../hmt-lexicon") =
 }
 
 
-println("\n\n1. Compile a morphological parser.")
-println("When kanónes and hmt-lexicon repositories are ")
-println("in adjacent directories to this directory:")
+
+
+/**  Parse words listed in a file, and return their analyses
+* as a String.
+*
+* @param wordsFile File with words to parse listed one per line.
+* @param parser Name of corpus-specific parser, a subdirectory of
+* kanones/parsers.
+*/
+def parse(wordsFile : String) : String = {
+  val cmd = fstinfl + " parser/greek.a  " + wordsFile
+  cmd !!
+}
+
+println("\n\n1. Compile a morphological parser.\n")
+println("  A. When kanónes and hmt-lexicon repositories are ")
+println("  in adjacent directories to this directory:")
 println("\n\tcompile()\n")
-println("Alternatively, specify the location of kanónes and")
-println("hmt-lexicon repositories:")
+println("  B. To specify the location of kanónes and")
+println("  hmt-lexicon repositories:")
 println("\n\tcompile(\"KANONES__DIRECTORY\", \"HMT_LEXICON_DIRECTORY\" )\n")
-println("\n2. Parse a word list:")
+println("\n2. Parse a file of words (one per line):")
+println("\n\tparse(\"WORDS_FILE\")")
