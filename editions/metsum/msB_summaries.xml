@@ -1,0 +1,14 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt><title>Metrical summaries of books of the Iliad</title></titleStmt>
+<publicationStmt><p>HMT project publication</p></publicationStmt>
+<sourceDesc><p>Directly edited from digital images</p></sourceDesc>
+</fileDesc></teiHeader>
+
+<text>
+<body>
+<l n="17">Text of summary</l>
+</body>
+</text>
+</TEI>
