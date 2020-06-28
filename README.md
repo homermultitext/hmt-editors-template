@@ -5,7 +5,7 @@
 
 Template for editorial repositories to use in the Homer Multitext project.
 
-The current template was used in the HMT 2020 Summer Experience.  It is pre-configured for work on the Venetus B and the Escorial, Upsilon 1.1 manuscripts; the `mom2020.sc` script for validation and verification assesses only:
+The current template was used in the HMT 2020 Summer Experience.  It is pre-configured for work on the Venetus B and the Escorial, Upsilon 1.1 manuscripts; the `mom2020.sc` script for validation and verification assesses that:
 
 - all data can be assembled into a citable digital library
 - all indexed relations in the `dse` directory are validated and verified
@@ -27,7 +27,7 @@ The four files in `textConfig` are:
 - `orthographies.cex` maps texts onto classes than can be generate a classified tokenization
 
 
-### Validation and verification
+### Extending validation and verification
 
 The validation/verification script `mom2020.sc` is completely restructured in 2020.  It applies instances of the `citevalidator` library's `CiteValidator` trait. (See [user guide](https://cite-architecture.github.io/citevalidator/).)  Implementing classes include a `validate` method that creates structured `TestResult`s; human-readable reports for verification (in markdown format) are generated with the `verify` method.
 
