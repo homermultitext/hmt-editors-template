@@ -1,0 +1,68 @@
+// This is the declaration of a CITE collection of text-bearing surfaces.
+// We concatenate data from the codices-data directory with this.
+
+#!datamodels
+Collection#Model#Label#Description
+urn:cite2:hmt:msA.v1:#urn:cite2:cite:datamodels.v1:tbsmodel#Model of Venetus A codex#The Venetus A manuscript in the CITE model of a sequence of text-bearing surfaces
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:hmt:msA.v1:#Venetus A manuscript#urn:cite2:hmt:msA.v1.label:#urn:cite2:hmt:msA.v1.sequence:#CC-attribution-share-alike
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:hmt:msA.v1.sequence:#Page sequence#Number#
+urn:cite2:hmt:msA.v1.urn:#URN#Cite2Urn#
+urn:cite2:hmt:msA.v1.rv:#Recto or Verso#String#recto,verso
+urn:cite2:hmt:msA.v1.label:#Label#String#
+urn:cite2:hmt:msA.v1.image:#TBS image#Cite2Urn#
+
+
+#!datamodels
+Collection#Model#Label#Description
+urn:cite2:hmt:burney86pages.v1:#urn:cite2:cite:datamodels.v1:tbsmodel#Model of Burney 86 manuscript#The Burney 86 manuscript in the CITE model of a sequence of text-bearing surfaces
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:hmt:burney86pages.v1:#Burney 86 manuscript#urn:cite2:hmt:burney86pages.v1.label:#urn:cite2:hmt:burney86pages.v1.sequence:#CC-attribution-share-alike
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:hmt:burney86pages.v1.sequence:#Page sequence#Number#
+urn:cite2:hmt:burney86pages.v1.urn:#URN#Cite2Urn#
+urn:cite2:hmt:burney86pages.v1.rv:#Recto or Verso#String#recto,verso
+urn:cite2:hmt:burney86pages.v1.label:#Label#String#
+urn:cite2:hmt:burney86pages.v1.image:#TBS image#Cite2Urn#
+
+#!datamodels
+Collection#Model#Label#Descriptio
+urn:cite2:hmt:e3pages.v1:#urn:cite2:cite:datamodels.v1:tbsmodel#Model of Escorial Y 1.1 codex#Escorial Monastery, codex Y 1.1, in the CITE model of a sequence of text-bearing surfaces
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:hmt:e3pages.v1:#Escorial Y 1.1 manuscript#urn:cite2:hmt:e3pages.v1.label:#urn:cite2:hmt:e3pages.v1.sequence:#CC-attribution-share-alike
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:hmt:e3pages.v1.sequence:#Page sequence#Number#
+urn:cite2:hmt:e3pages.v1.urn:#URN#Cite2Urn#
+urn:cite2:hmt:e3pages.v1.rv:#Recto or Verso#String#recto,verso
+urn:cite2:hmt:e3pages.v1.label:#Label#String#
+urn:cite2:hmt:e3pages.v1.image:#TBS image#Cite2Urn#
+
+
+#!datamodels
+Collection#Model#Label#Description
+urn:cite2:hmt:msB.v1:#urn:cite2:cite:datamodels.v1:tbsmodel#Model of Venetus B codex#The Venetus B manuscript in the CITE model of a sequence of text-bearing surfaces
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:hmt:msB.v1:#Venetus B manuscript#urn:cite2:hmt:msB.v1.label:#urn:cite2:hmt:msB.v1.sequence:#CC-attribution-share-alike
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:hmt:msB.v1.sequence:#Page sequence#Number#
+urn:cite2:hmt:msB.v1.urn:#URN#Cite2Urn#
+urn:cite2:hmt:msB.v1.rv:#Recto or Verso#String#recto,verso
+urn:cite2:hmt:msB.v1.label:#Label#String#
+urn:cite2:hmt:msB.v1.image:#TBS image#Cite2Urn#

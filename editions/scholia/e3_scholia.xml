@@ -15,20 +15,22 @@
         </fileDesc>
     </teiHeader>
     <text>
-        <text n="e3">
-            <body>
-                <div n="e3_PAGE_SCHOLNUMBER" type="scholion">
-                    <div n="lemma">
-                        <p><num>GREEK NUMBER</num></p>
-                    </div>
-                    <div n="ref">
-                        <p>urn:cts:greekLit:tlg0012.tlg001.msB:17.ILIAD_LINE</p>
-                    </div>
-                    <div n="comment">
-                        <p>Scholiion text</p>
-                    </div>
-                </div>
-            </body>
-        </text>
+      <group n="23">
+          <text n="e3">
+              <body>
+                  <div n="e3_PAGE_SCHOLNUMBER" type="scholion">
+                      <div n="lemma">
+                          <p><num>GREEK NUMBER</num></p>
+                      </div>
+                      <div n="ref">
+                          <p>urn:cts:greekLit:tlg0012.tlg001.e3:23.ILIAD_LINE</p>
+                      </div>
+                      <div n="comment">
+                          <p>Scholiion text</p>
+                      </div>
+                  </div>
+              </body>
+          </text>
+      </group>
     </text>
 </TEI>

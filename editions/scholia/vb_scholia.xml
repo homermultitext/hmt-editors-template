@@ -15,7 +15,7 @@
         </fileDesc>
     </teiHeader>
     <text>
-        <group n="17">
+        <group n="23">
             <text n="msB">
                 <body>
                     <div n="msB_PAGE_SCHOLNUMBER" type="scholion">
@@ -23,7 +23,7 @@
                             <p><num>GREEK NUMBER</num></p>
                         </div>
                         <div n="ref">
-                            <p>urn:cts:greekLit:tlg0012.tlg001.msB:17.ILIAD_LINE</p>
+                            <p>urn:cts:greekLit:tlg0012.tlg001.msB:23.ILIAD_LINE</p>
                         </div>
                         <div n="comment">
                             <p>Scholiion text</p>

@@ -5,8 +5,8 @@
 3.0.1
 
 #!citelibrary
-name#Homer Multitext project, work on Iliad 16, summer 2018
-urn#urn:cite2:hmt:workinprogress.cex.iliad16:all
+name#MID manuscriptshackathon 2019
+urn#urn:cite2:hcmid:mshackathon.cex.2019workshop:all
 license#Creative Commons Attribution, Non-Commercial 4.0 License <https://creativecommons.org/licenses/by-nc/4.0/>.
 
 // We apply the DSE data model in our work in progress,
