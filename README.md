@@ -8,6 +8,14 @@ Template for creating editorial repositories to use in the Homer Multitext proje
 The current template is intended for use with the HMT project virtual machine used in summer, 2019, and includes validation of features unique to the Upsilon 1.1 and Venetus B manucripts that are the focus of our work in summer, 2019..
 
 
+
+## 2020
+
+- includes codex models for 4 MSS
+- new config system isolated in `textConfig` dir
+- new pluggable validation/verification in mom2020
+
+
 ## Overview of files and directory layout
 
 -  `collections/validation.cex`.  Records of editorial status of pages you have worked on.
