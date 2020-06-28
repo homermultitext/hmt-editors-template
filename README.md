@@ -3,28 +3,31 @@
 
 
 
-Template for creating editorial repositories to use in the Homer Multitext project virtual machine.
+Template for editorial repositories to use in the Homer Multitext project.
 
-The current template is intended for use with the HMT project virtual machine used in summer, 2019, and includes validation of features unique to the Upsilon 1.1 and Venetus B manucripts that are the focus of our work in summer, 2019..
+The current template was used in the HMT 2020 Summer Experience.  It is pre-configured for work on the Venetus B and the Escorial, Upsilon 1.1 manuscripts; the `mom2020.sc` script for validation and verification assesses only:
+
+- all data can be assembled into a citable digital library
+- all indexed relations in the `dse` directory are validated and verified
+- character set usage for *Iliad* editions is validated and verified.
 
 
+## Using this template outside the 2020 Summer Experience
 
-## 2020
 
-- includes codex models for 4 MSS
-- new config system isolated in `textConfig` dir
+### Configuring other texts
+
+The template includes codex models for four manuscripts:  in addition to the Venetus B and the Upsilon 1.1, it includes the Venetus and British Library Burney 86  ("the Townley Homer").  To work on any of those four manuscripts, you need to configure entries for your chosen manuscripts' texts in the `.cex` files in the `textConfig` directory.  (If you want to work with other Homeric manuscripts, you'll need to add codex models for them to the `codices-catalog` and `codices-data` directories.)
+
+The four files in `textConfig` are:
+
+- `catalog.cex` provides basic bibligoraphic information about each text
+- `citation.cex` defines how the citation scheme maps on to the concrete document.  (These two files provide the information used by the `fromFiles` method of the `TextRespositorySource` object: see [API](https://cite-architecture.github.io/cite-api-docs/ohco2/api/edu/holycross/shot/ohco2/TextRepositorySource$.html).)
+- `readers.cex` maps texts onto classes that can generate plain-text editions from XML markup
+- `orthographies.cex` maps texts onto classes than can be generate a classified tokenization
+
+
+### Validation and verification
+
+
 - new pluggable validation/verification in mom2020
-
-
-## Overview of files and directory layout
-
--  `collections/validation.cex`.  Records of editorial status of pages you have worked on.
--   `dse`.  Directory for files with DSE records.  Files may be any name ending `.cex` but must begin with the header line `passage#imageroi#surface`
--   `editions/iliad`.  TEI editions of *Iliads* go in this directory.  The template file has the citation structured required by the HMT project.
--   `editions/scholia`.  TEI editions of scholia to the *Iliad* go here.  The template files have the citation structured required by the HMT project.
--  `editions/metsumm`.  TEI editions of metrical  summaries of books of the *Iliad* go here.  The template files have the citation structured required by the HMT project.
--  `header`.  Header files used when compiling your entire repository into a single CEX file.  You should not edit these files.
--   `paleography`.  Directory for files with paleographic observations.  Files may be any name ending `.cex` but must begin with the header line `observation#text#image#comments`.
--   `scripts/mom2019.sc`.  The scala script used in validating and verifying your work.
--   `template-copy-paste`.  Some handy files for copying and pasting hard-to-type characters, a complete block of XML for a new scholion, and other reference material.
--   `validation`.  Reports on validating your work are written to this directory.
