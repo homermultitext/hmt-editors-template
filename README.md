@@ -32,6 +32,3 @@ The four files in `textConfig` are:
 The validation/verification script `mom2020.sc` is completely restructured in 2020.  It applies instances of the `citevalidator` library's `CiteValidator` trait. (See [user guide](https://cite-architecture.github.io/citevalidator/).)  Implementing classes include a `validate` method that creates structured `TestResult`s; human-readable reports for verification (in markdown format) are generated with the `verify` method.
 
 For the 2020 Summer Experience, only two validators were included:  a generic validation of all indexed relations in the `dse` data set, and validation of the character usage in *Iliad* editions.  It is straightforward to add further validators to the `mom2020.sc` script for teams that are prepared to assess their work in more depth.
-
-
-- new pluggable validation/verification in mom2020
