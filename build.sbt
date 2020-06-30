@@ -2,7 +2,7 @@
 
 
 scalaVersion := "2.12.10"
-name := "Iliad 23"
+name := "HMT editing templae"
 
 licenses += ("GPL-3.0",url("https://opensource.org/licenses/gpl-3.0.html"))
 resolvers += Resolver.jcenterRepo
