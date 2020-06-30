@@ -2,7 +2,7 @@
 
 
 scalaVersion := "2.12.10"
-name := "HMT editing templae"
+name := "HMT editing template"
 
 licenses += ("GPL-3.0",url("https://opensource.org/licenses/gpl-3.0.html"))
 resolvers += Resolver.jcenterRepo
